@@ -12,15 +12,19 @@
     }
   },
   "files": [
-    "dist"
+    "dist/src"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/vollib/lets-be-rational-ts.git"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && node --test dist/test/*.test.js"
   },
   "dependencies": {
-    "cody-special": "file:../cody-special-ts",
-    "piecewise-rational": "file:../piecewise-rational-ts"
+    "cody-special": "^0.1.0",
+    "piecewise-rational": "^0.1.0"
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
