@@ -1,0 +1,31 @@
+{
+  "name": "lets-be-rational",
+  "version": "0.1.0",
+  "description": "TypeScript port of Peter Jaeckel's LetsBeRational normalized Black and implied volatility routines.",
+  "type": "module",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "generate:cpp-vectors": "sh scripts/generate-cpp-vectors.sh",
+    "test": "npm run build && node --test dist/test/*.test.js"
+  },
+  "dependencies": {
+    "cody-special": "file:../cody-special-ts",
+    "piecewise-rational": "file:../piecewise-rational-ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.5"
+  },
+  "license": "MIT"
+}

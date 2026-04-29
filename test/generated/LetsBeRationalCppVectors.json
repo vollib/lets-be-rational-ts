@@ -1,0 +1,610 @@
+{
+  "provenance": {
+    "source": "Peter Jaeckel LetsBeRational C++",
+    "decimalPrecision": "std::numeric_limits<double>::max_digits10",
+    "hexFloatIncluded": true
+  },
+  "normalDistribution": [
+    {
+      "z": -10,
+      "normCdf": 7.6198530241605255e-24,
+      "normCdfHex": "0x1.26c75e84fb10dp-77"
+    },
+    {
+      "z": -8,
+      "normCdf": 6.2209605742718204e-16,
+      "normCdfHex": "0x1.669d2c90d55f3p-51"
+    },
+    {
+      "z": -4,
+      "normCdf": 3.1671241833119972e-05,
+      "normCdfHex": "0x1.09ad7954affffp-15"
+    },
+    {
+      "z": -1,
+      "normCdf": 0.15865525393145705,
+      "normCdfHex": "0x1.44ed0bb7cb20bp-3"
+    },
+    {
+      "z": -0.10000000000000001,
+      "normCdf": 0.46017216272297101,
+      "normCdfHex": "0x1.d7375f15b2f1ep-2"
+    },
+    {
+      "z": 0,
+      "normCdf": 0.5,
+      "normCdfHex": "0x1p-1"
+    },
+    {
+      "z": 0.10000000000000001,
+      "normCdf": 0.53982783727702899,
+      "normCdfHex": "0x1.1464507526871p-1"
+    },
+    {
+      "z": 1,
+      "normCdf": 0.84134474606854293,
+      "normCdfHex": "0x1.aec4bd120d37dp-1"
+    },
+    {
+      "z": 4,
+      "normCdf": 0.99996832875816688,
+      "normCdfHex": "0x1.fffbd94a1aad4p-1"
+    },
+    {
+      "z": 8,
+      "normCdf": 0.99999999999999933,
+      "normCdfHex": "0x1.ffffffffffffap-1"
+    },
+    {
+      "z": 10,
+      "normCdf": 1,
+      "normCdfHex": "0x1p+0"
+    }
+  ],
+  "normalisedBlack": [
+    {
+      "input": {
+      "x": -10,
+      "s": 0.050000000000000003,
+      "q": 1
+      },
+      "output": {
+      "normalisedBlack": 0,
+      "normalisedImpliedVolatility": 0,
+      "complementaryNormalisedBlack": 0,
+      "normalisedVega": 0,
+      "normalisedBlackHex": "0x0p+0"
+      }
+    },
+    {
+      "input": {
+      "x": -4,
+      "s": 0.5,
+      "q": 1
+      },
+      "output": {
+      "normalisedBlack": 3.6622185117102123e-17,
+      "normalisedImpliedVolatility": 0.49999999999999994,
+      "complementaryNormalisedBlack": 0.13533528323661242,
+      "normalisedVega": 4.8968290437477651e-15,
+      "normalisedBlackHex": "0x1.51c7b094529ebp-55"
+      }
+    },
+    {
+      "input": {
+      "x": -1,
+      "s": 0.25,
+      "q": 1
+      },
+      "output": {
+      "normalisedBlack": 1.7736606889378073e-06,
+      "normalisedImpliedVolatility": 0.24999999999999997,
+      "complementaryNormalisedBlack": 0.6065288860519441,
+      "normalisedVega": 0.00013278875068533744,
+      "normalisedBlackHex": "0x1.dc1d08d1c8319p-20"
+      }
+    },
+    {
+      "input": {
+      "x": -0.25,
+      "s": 0.050000000000000003,
+      "q": 1
+      },
+      "output": {
+      "normalisedBlack": 2.6723007039989461e-09,
+      "normalisedImpliedVolatility": 0.049999999999999996,
+      "complementaryNormalisedBlack": 0.88249689991229041,
+      "normalisedVega": 1.4862549874721086e-06,
+      "normalisedBlackHex": "0x1.6f4738e8d5329p-29"
+      }
+    },
+    {
+      "input": {
+      "x": -0.01,
+      "s": 0.001,
+      "q": 1
+      },
+      "output": {
+      "normalisedBlack": 7.4745593377628369e-28,
+      "normalisedImpliedVolatility": 0.0010000000000000002,
+      "complementaryNormalisedBlack": 0.99501247919267199,
+      "normalisedVega": 7.6945976648816538e-23,
+      "normalisedBlackHex": "0x1.d9c1a8c653f3dp-91"
+      }
+    },
+    {
+      "input": {
+      "x": 0,
+      "s": 0.001,
+      "q": 1
+      },
+      "output": {
+      "normalisedBlack": 0.00039894226377883829,
+      "normalisedImpliedVolatility": 0.001,
+      "complementaryNormalisedBlack": 0.99960105773622132,
+      "normalisedVega": 0.39894223053365074,
+      "normalisedBlackHex": "0x1.a2523f9d60b7ep-12"
+      }
+    },
+    {
+      "input": {
+      "x": 0,
+      "s": 0.20000000000000001,
+      "q": 1
+      },
+      "output": {
+      "normalisedBlack": 0.079655674554057948,
+      "normalisedImpliedVolatility": 0.19999999999999993,
+      "complementaryNormalisedBlack": 0.92034432544594191,
+      "normalisedVega": 0.39695254747701175,
+      "normalisedBlackHex": "0x1.464507526870ep-4"
+      }
+    },
+    {
+      "input": {
+      "x": 0.01,
+      "s": 0.001,
+      "q": 1
+      },
+      "output": {
+      "normalisedBlack": 0.010000041666718751,
+      "normalisedImpliedVolatility": 0,
+      "complementaryNormalisedBlack": 0.99501247919267199,
+      "normalisedVega": 7.6945976648816538e-23,
+      "normalisedBlackHex": "0x1.47ae6df566ap-7"
+      }
+    },
+    {
+      "input": {
+      "x": 0.25,
+      "s": 0.050000000000000003,
+      "q": 1
+      },
+      "output": {
+      "normalisedBlack": 0.25065155315453164,
+      "normalisedImpliedVolatility": 0.050000000006760061,
+      "complementaryNormalisedBlack": 0.88249689991229041,
+      "normalisedVega": 1.4862549874721086e-06,
+      "normalisedBlackHex": "0x1.00aaccfdf6163p-2"
+      }
+    },
+    {
+      "input": {
+      "x": 1,
+      "s": 0.25,
+      "q": 1
+      },
+      "output": {
+      "normalisedBlack": 1.0421923846481838,
+      "normalisedImpliedVolatility": 0.25000000000036449,
+      "complementaryNormalisedBlack": 0.6065288860519441,
+      "normalisedVega": 0.00013278875068533744,
+      "normalisedBlackHex": "0x1.0acd1ec034469p+0"
+      }
+    },
+    {
+      "input": {
+      "x": 4,
+      "s": 0.5,
+      "q": 1
+      },
+      "output": {
+      "normalisedBlack": 7.2537208156940371,
+      "normalisedImpliedVolatility": 0,
+      "complementaryNormalisedBlack": 0.13533528323661242,
+      "normalisedVega": 4.8968290437477651e-15,
+      "normalisedBlackHex": "0x1.d03cf63b6e19fp+2"
+      }
+    },
+    {
+      "input": {
+      "x": 10,
+      "s": 0.050000000000000003,
+      "q": 1
+      },
+      "output": {
+      "normalisedBlack": 148.4064211555775,
+      "normalisedImpliedVolatility": 0,
+      "complementaryNormalisedBlack": 0,
+      "normalisedVega": 0,
+      "normalisedBlackHex": "0x1.28d0166f07374p+7"
+      }
+    },
+    {
+      "input": {
+      "x": -10,
+      "s": 0.050000000000000003,
+      "q": -1
+      },
+      "output": {
+      "normalisedBlack": 148.4064211555775,
+      "normalisedImpliedVolatility": 0,
+      "complementaryNormalisedBlack": 0,
+      "normalisedVega": 0,
+      "normalisedBlackHex": "0x1.28d0166f07374p+7"
+      }
+    },
+    {
+      "input": {
+      "x": -4,
+      "s": 0.5,
+      "q": -1
+      },
+      "output": {
+      "normalisedBlack": 7.2537208156940371,
+      "normalisedImpliedVolatility": 0,
+      "complementaryNormalisedBlack": 0.13533528323661242,
+      "normalisedVega": 4.8968290437477651e-15,
+      "normalisedBlackHex": "0x1.d03cf63b6e19fp+2"
+      }
+    },
+    {
+      "input": {
+      "x": -1,
+      "s": 0.25,
+      "q": -1
+      },
+      "output": {
+      "normalisedBlack": 1.0421923846481838,
+      "normalisedImpliedVolatility": 0.25000000000036449,
+      "complementaryNormalisedBlack": 0.6065288860519441,
+      "normalisedVega": 0.00013278875068533744,
+      "normalisedBlackHex": "0x1.0acd1ec034469p+0"
+      }
+    },
+    {
+      "input": {
+      "x": -0.25,
+      "s": 0.050000000000000003,
+      "q": -1
+      },
+      "output": {
+      "normalisedBlack": 0.25065155315453164,
+      "normalisedImpliedVolatility": 0.050000000006760061,
+      "complementaryNormalisedBlack": 0.88249689991229041,
+      "normalisedVega": 1.4862549874721086e-06,
+      "normalisedBlackHex": "0x1.00aaccfdf6163p-2"
+      }
+    },
+    {
+      "input": {
+      "x": -0.01,
+      "s": 0.001,
+      "q": -1
+      },
+      "output": {
+      "normalisedBlack": 0.010000041666718751,
+      "normalisedImpliedVolatility": 0,
+      "complementaryNormalisedBlack": 0.99501247919267199,
+      "normalisedVega": 7.6945976648816538e-23,
+      "normalisedBlackHex": "0x1.47ae6df566ap-7"
+      }
+    },
+    {
+      "input": {
+      "x": 0,
+      "s": 0.001,
+      "q": -1
+      },
+      "output": {
+      "normalisedBlack": 0.00039894226377883829,
+      "normalisedImpliedVolatility": 0.001,
+      "complementaryNormalisedBlack": 0.99960105773622132,
+      "normalisedVega": 0.39894223053365074,
+      "normalisedBlackHex": "0x1.a2523f9d60b7ep-12"
+      }
+    },
+    {
+      "input": {
+      "x": 0,
+      "s": 0.20000000000000001,
+      "q": -1
+      },
+      "output": {
+      "normalisedBlack": 0.079655674554057948,
+      "normalisedImpliedVolatility": 0.19999999999999993,
+      "complementaryNormalisedBlack": 0.92034432544594191,
+      "normalisedVega": 0.39695254747701175,
+      "normalisedBlackHex": "0x1.464507526870ep-4"
+      }
+    },
+    {
+      "input": {
+      "x": 0.01,
+      "s": 0.001,
+      "q": -1
+      },
+      "output": {
+      "normalisedBlack": 7.4745593377628369e-28,
+      "normalisedImpliedVolatility": 0.0010000000000000002,
+      "complementaryNormalisedBlack": 0.99501247919267199,
+      "normalisedVega": 7.6945976648816538e-23,
+      "normalisedBlackHex": "0x1.d9c1a8c653f3dp-91"
+      }
+    },
+    {
+      "input": {
+      "x": 0.25,
+      "s": 0.050000000000000003,
+      "q": -1
+      },
+      "output": {
+      "normalisedBlack": 2.6723007039989461e-09,
+      "normalisedImpliedVolatility": 0.049999999999999996,
+      "complementaryNormalisedBlack": 0.88249689991229041,
+      "normalisedVega": 1.4862549874721086e-06,
+      "normalisedBlackHex": "0x1.6f4738e8d5329p-29"
+      }
+    },
+    {
+      "input": {
+      "x": 1,
+      "s": 0.25,
+      "q": -1
+      },
+      "output": {
+      "normalisedBlack": 1.7736606889378073e-06,
+      "normalisedImpliedVolatility": 0.24999999999999997,
+      "complementaryNormalisedBlack": 0.6065288860519441,
+      "normalisedVega": 0.00013278875068533744,
+      "normalisedBlackHex": "0x1.dc1d08d1c8319p-20"
+      }
+    },
+    {
+      "input": {
+      "x": 4,
+      "s": 0.5,
+      "q": -1
+      },
+      "output": {
+      "normalisedBlack": 3.6622185117102123e-17,
+      "normalisedImpliedVolatility": 0.49999999999999994,
+      "complementaryNormalisedBlack": 0.13533528323661242,
+      "normalisedVega": 4.8968290437477651e-15,
+      "normalisedBlackHex": "0x1.51c7b094529ebp-55"
+      }
+    },
+    {
+      "input": {
+      "x": 10,
+      "s": 0.050000000000000003,
+      "q": -1
+      },
+      "output": {
+      "normalisedBlack": 0,
+      "normalisedImpliedVolatility": 0,
+      "complementaryNormalisedBlack": 0,
+      "normalisedVega": 0,
+      "normalisedBlackHex": "0x0p+0"
+      }
+    },
+    {
+      "input": {
+      "x": -0.5,
+      "s": 4,
+      "q": 1
+      },
+      "output": {
+      "normalisedBlack": 0.73356504041606319,
+      "normalisedImpliedVolatility": 4,
+      "complementaryNormalisedBlack": 0.0452357426553417,
+      "normalisedVega": 0.053570805478393296,
+      "normalisedBlackHex": "0x1.7795d64426ddap-1"
+      }
+    },
+    {
+      "input": {
+      "x": 0.5,
+      "s": 4,
+      "q": -1
+      },
+      "output": {
+      "normalisedBlack": 0.73356504041606319,
+      "normalisedImpliedVolatility": 4,
+      "complementaryNormalisedBlack": 0.0452357426553417,
+      "normalisedVega": 0.053570805478393296,
+      "normalisedBlackHex": "0x1.7795d64426ddap-1"
+      }
+    },
+    {
+      "input": {
+      "x": -64,
+      "s": 8,
+      "q": 1
+      },
+      "output": {
+      "normalisedBlack": 2.6081356343879336e-19,
+      "normalisedImpliedVolatility": 7.9999999999999982,
+      "complementaryNormalisedBlack": 1.2663904735530717e-14,
+      "normalisedVega": 1.6948481345591567e-18,
+      "normalisedBlackHex": "0x1.33ea100f83663p-62"
+      }
+    },
+    {
+      "input": {
+      "x": 64,
+      "s": 8,
+      "q": -1
+      },
+      "output": {
+      "normalisedBlack": 2.6081356343879336e-19,
+      "normalisedImpliedVolatility": 7.9999999999999982,
+      "complementaryNormalisedBlack": 1.2663904735530717e-14,
+      "normalisedVega": 1.6948481345591567e-18,
+      "normalisedBlackHex": "0x1.33ea100f83663p-62"
+      }
+    }
+  ],
+  "black": [
+    {
+      "input": {
+      "F": 100,
+      "K": 100,
+      "sigma": 0.20000000000000001,
+      "T": 0.5,
+      "q": 1
+      },
+      "output": {
+      "black": 5.6371977797016619,
+      "impliedBlackVolatility": 0.19999999999999998,
+      "vega": 28.139043560650478,
+      "blackHex": "0x1.68c7d93239c1cp+2"
+      }
+    },
+    {
+      "input": {
+      "F": 100,
+      "K": 100,
+      "sigma": 0.20000000000000001,
+      "T": 0.5,
+      "q": -1
+      },
+      "output": {
+      "black": 5.6371977797016619,
+      "impliedBlackVolatility": 0.19999999999999998,
+      "vega": 28.139043560650478,
+      "blackHex": "0x1.68c7d93239c1cp+2"
+      }
+    },
+    {
+      "input": {
+      "F": 100,
+      "K": 95,
+      "sigma": 0.29999999999999999,
+      "T": 0.5,
+      "q": 1
+      },
+      "output": {
+      "black": 10.974459762526392,
+      "impliedBlackVolatility": 0.29999999999999999,
+      "vega": 26.553274122728382,
+      "blackHex": "0x1.5f2ec63d6a337p+3"
+      }
+    },
+    {
+      "input": {
+      "F": 100,
+      "K": 95,
+      "sigma": 0.29999999999999999,
+      "T": 0.5,
+      "q": -1
+      },
+      "output": {
+      "black": 5.9744597625263918,
+      "impliedBlackVolatility": 0.29999999999999999,
+      "vega": 26.553274122728382,
+      "blackHex": "0x1.7e5d8c7ad466ep+2"
+      }
+    },
+    {
+      "input": {
+      "F": 95,
+      "K": 100,
+      "sigma": 0.29999999999999999,
+      "T": 0.5,
+      "q": 1
+      },
+      "output": {
+      "black": 5.9744597625263873,
+      "impliedBlackVolatility": 0.29999999999999993,
+      "vega": 26.553274122728375,
+      "blackHex": "0x1.7e5d8c7ad4669p+2"
+      }
+    },
+    {
+      "input": {
+      "F": 95,
+      "K": 100,
+      "sigma": 0.29999999999999999,
+      "T": 0.5,
+      "q": -1
+      },
+      "output": {
+      "black": 10.974459762526386,
+      "impliedBlackVolatility": 0.29999999999999993,
+      "vega": 26.553274122728375,
+      "blackHex": "0x1.5f2ec63d6a334p+3"
+      }
+    },
+    {
+      "input": {
+      "F": 1000,
+      "K": 100,
+      "sigma": 0.10000000000000001,
+      "T": 2,
+      "q": 1
+      },
+      "output": {
+      "black": 900,
+      "impliedBlackVolatility": 0,
+      "vega": 4.849667933408986e-56,
+      "blackHex": "0x1.c2p+9"
+      }
+    },
+    {
+      "input": {
+      "F": 100,
+      "K": 1000,
+      "sigma": 0.10000000000000001,
+      "T": 2,
+      "q": -1
+      },
+      "output": {
+      "black": 900,
+      "impliedBlackVolatility": 0,
+      "vega": 4.8496679334092613e-56,
+      "blackHex": "0x1.c2p+9"
+      }
+    },
+    {
+      "input": {
+      "F": 1e-08,
+      "K": 1e-08,
+      "sigma": 2,
+      "T": 0.01,
+      "q": 1
+      },
+      "output": {
+      "black": 7.9655674554057945e-10,
+      "impliedBlackVolatility": 1.9999999999999991,
+      "vega": 3.9695254747701176e-10,
+      "blackHex": "0x1.b5e9654c96475p-31"
+      }
+    },
+    {
+      "input": {
+      "F": 100000000,
+      "K": 100000000,
+      "sigma": 0.01,
+      "T": 30,
+      "q": -1
+      },
+      "output": {
+      "black": 2184823.754801691,
+      "impliedBlackVolatility": 0.0099999999999999967,
+      "vega": 218427760.34816337,
+      "blackHex": "0x1.0ab3be09d5781p+21"
+      }
+    }
+  ]
+}
