@@ -202,3 +202,17 @@ test("normalised Black matches shared C++ binary64 reduced-domain vectors", () =
     }
   }
 });
+
+test("normalised implied volatility round trips back to the shared C++ price", () => {
+  const priceRoundTripTolerance = Math.max(cppVectors.tolerancePolicy.absolute, cppVectors.tolerancePolicy.relative);
+  for (const row of cppVectors.cases) {
+    const { x, theta } = row.input;
+    const beta = row.input.s === undefined ? row.output.normalisedPrice! : row.output.normalisedBlack!;
+
+    if (beta <= 0 || beta >= row.output.bmax) continue;
+
+    const impliedVolatility = normalisedImpliedVolatilityFromATransformedRationalGuess(beta, x, theta);
+    const roundTrippedPrice = normalisedBlack(x, impliedVolatility, theta);
+    close(roundTrippedPrice, beta, priceRoundTripTolerance);
+  }
+});
