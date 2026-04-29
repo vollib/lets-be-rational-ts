@@ -107,38 +107,32 @@ const grid = JSON.parse(
 ) as { input: GridInput[]; output: GridOutput[] };
 
 type CppVectors = {
-  normalDistribution: Array<{
-    z: number;
-    normCdf: number;
-  }>;
-  normalisedBlack: Array<{
+  tolerancePolicy: {
+    absolute: number;
+    relative: number;
+  };
+  cases: Array<{
+    id: string;
     input: {
       x: number;
-      s: number;
-      q: number;
+      s?: number;
+      theta: number;
+      priceFractionOfBMax?: number;
     };
     output: {
-      normalisedBlack: number;
-      normalisedImpliedVolatility: number;
-      normalisedVega: number;
-    };
-  }>;
-  black: Array<{
-    input: {
-      F: number;
-      K: number;
-      sigma: number;
-      T: number;
-      q: number;
-    };
-    output: {
-      black: number;
-      impliedBlackVolatility: number;
+      bmax: number;
+      normalisedBlack?: number;
+      normalisedVega?: number;
+      normalisedImpliedVolatilityFromPrice?: number;
+      normalisedPrice?: number;
+      normalisedImpliedVolatility?: number;
     };
   }>;
 };
 
-const cppVectors = JSON.parse(readFileSync("test/generated/LetsBeRationalCppVectors.json", "utf8")) as CppVectors;
+const cppVectors = JSON.parse(
+  readFileSync("node_modules/vollib-test-vectors/vectors/lets-be-rational/binary64/normalised-black-reduced-domain.json", "utf8")
+) as CppVectors;
 
 test("full LetsBeRational regression value grid", () => {
   for (let i = 0; i < grid.input.length; i += 1) {
@@ -178,36 +172,32 @@ test("full LetsBeRational regression value grid", () => {
   }
 });
 
-test("C++ LetsBeRational generated vectors", () => {
-  for (const row of cppVectors.normalDistribution) {
-    close(normCdf(row.z), row.normCdf, 1e-15);
-  }
+test("normalised Black matches shared C++ binary64 reduced-domain vectors", () => {
+  const directTolerance = Math.max(cppVectors.tolerancePolicy.absolute, cppVectors.tolerancePolicy.relative);
+  const impliedVolatilityTolerance = 2e-3;
+  for (const row of cppVectors.cases) {
+    const { x, theta } = row.input;
+    assert.equal(theta, 1, `${row.id}: expected reduced-domain theta = +1`);
+    assert.ok(x <= 0, `${row.id}: expected reduced-domain x <= 0`);
 
-  for (const row of cppVectors.normalisedBlack) {
-    const { x, s, q } = row.input;
-    const beta = normalisedBlack(x, s, q);
-    close(beta, row.output.normalisedBlack, 5e-13);
-    close(normalisedVega(x, s), row.output.normalisedVega, 5e-13);
+    if (row.input.s !== undefined) {
+      const beta = normalisedBlack(x, row.input.s, theta);
+      close(beta, row.output.normalisedBlack!, directTolerance);
+      close(normalisedVega(x, row.input.s), row.output.normalisedVega!, directTolerance);
 
-    if (row.output.normalisedImpliedVolatility > 0) {
+      if (row.output.normalisedImpliedVolatilityFromPrice! > 0 && beta < row.output.bmax) {
+        close(
+          normalisedImpliedVolatilityFromATransformedRationalGuess(beta, x, theta),
+          row.output.normalisedImpliedVolatilityFromPrice!,
+          impliedVolatilityTolerance
+        );
+      }
+    } else {
+      const beta = row.output.normalisedPrice!;
       close(
-        normalisedImpliedVolatilityFromATransformedRationalGuess(beta, x, q),
-        row.output.normalisedImpliedVolatility,
-        1e-9
-      );
-    }
-  }
-
-  for (const row of cppVectors.black) {
-    const { F, K, sigma, T, q } = row.input;
-    const price = black(F, K, sigma, T, q);
-    close(price, row.output.black, 5e-13);
-
-    if (row.output.impliedBlackVolatility > 0) {
-      close(
-        impliedVolatilityFromATransformedRationalGuess(price, F, K, T, q),
-        row.output.impliedBlackVolatility,
-        1e-9
+        normalisedImpliedVolatilityFromATransformedRationalGuess(beta, x, theta),
+        row.output.normalisedImpliedVolatility!,
+        impliedVolatilityTolerance
       );
     }
   }

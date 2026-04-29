@@ -16,7 +16,6 @@
   ],
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "generate:cpp-vectors": "sh scripts/generate-cpp-vectors.sh",
     "test": "npm run build && node --test dist/test/*.test.js"
   },
   "dependencies": {
@@ -25,7 +24,8 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vollib-test-vectors": "git+ssh://git@github.com/vollib/vollib-test-vectors.git#c5fb306508779646bf70edb57f26ccf4fbaa540f"
   },
   "license": "MIT"
 }
